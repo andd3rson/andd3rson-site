@@ -1,6 +1,19 @@
-.map {
+#map {
     background: black;
     height: 10px;
     width: 100%;
     border: 1px solid black;
+}
+
+.iconList {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+
+    li {
+        i {
+            color: black;
+        }
+    }
 }
