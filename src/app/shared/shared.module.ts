@@ -1,17 +1,10 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { NotfoundPageComponent } from './notfound-page/notfound-page.component';
-import { HeaderComponent } from './header/header.component';
-
-
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { NotfoundPageComponent } from "./notfound-page/notfound-page.component";
 
 @NgModule({
-  declarations: [
-    NotfoundPageComponent,
-    HeaderComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+  declarations: [NotfoundPageComponent],
+  imports: [CommonModule],
+  providers: [NotfoundPageComponent],
 })
-export class SharedModule { }
+export class SharedModule {}
