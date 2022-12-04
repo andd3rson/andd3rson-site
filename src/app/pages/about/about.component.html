@@ -1,0 +1,34 @@
+<!--A picture -->
+<section class="picture">
+    0
+</section>
+<hr>
+
+<!--Personal Information Section-->
+<section class="personal-information pt-3">
+    <div class="mb-4">
+
+        <h6>{{introduction[0].title}}</h6>
+        <span>{{ introduction[0].describe }}</span>
+    </div>
+    <ul style="list-style: square;">
+        <li *ngFor="let item of personal">
+            <strong> {{ item.field }}</strong> - <small> {{item.describe}}</small>
+        </li>
+    </ul>
+
+    <div class="mb-4">
+        <span>{{ introduction[1].describe }}</span>
+    </div>
+</section>
+
+<hr>
+<!-- Skills -->
+<section>
+    2
+</section>
+
+<!-- Interests-->
+<section>
+    3
+</section>
