@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { ProjectsService } from "./projects.service";
+import { Project } from "./project.model";
 
 @Component({
-  selector: 'app-projects',
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  selector: "app-projects",
+  templateUrl: "./projects.component.html",
+  styleUrls: ["./projects.component.scss"],
 })
 export class ProjectsComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  gitProject: Project[] = [];
+  constructor(private proj: ProjectsService) {
+    proj.getGitHubRepository().subscribe((res: Project[]) => {
+      this.gitProject = res;
+      console.log(this.gitProject[1].name);
+    });
   }
 
+  ngOnInit() {}
 }

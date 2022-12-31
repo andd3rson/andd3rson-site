@@ -1,1 +1,8 @@
 <p>projects works!</p>
+
+<ul *ngFor="let item of gitProject">
+    <li [id]="item.id">
+        {{ item.name }} --
+        {{item.html_url}}
+    </li>
+</ul>
