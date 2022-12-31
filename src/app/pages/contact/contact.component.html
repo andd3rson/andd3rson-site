@@ -1,72 +1,75 @@
-<div class="row mt-5">
-    <div class="col-md-6 col-sm-6 col-12" *ngFor="let contact of contactsCards">
+<div class="contact">
 
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4 col-sm-4 col-12 bg-secondary bg-gradient ">
-                 
-                    
-                </div>
-                <div class="col-md-8 col-12 col-sm-4">
-                    <div class="card-body">
-                        <h3 class="card-title text-center">{{contact.title}}</h3>
-                        <span class="card-text">
-                            <ul *ngIf="contact.description == null" class="iconList">
-                                <li *ngFor="let url of contact.urls">
-                                    <a href="{{url.path}}">
-                                        <i class=" fa fa-2x fa-brands fa-{{ url.icon }} "></i>
-                                    </a>
+    <div class="row mt-5">
+        <div class="col-md-6 col-sm-6 col-12" *ngFor="let contact of contactsCards">
 
-                                </li>
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4 col-sm-4 col-12 bg-secondary bg-gradient ">
 
-                            </ul>
-                            <p *ngIf="contact.description != null" style="padding: 5px;" class="iconList">
 
-                                {{ contact.description }}
+                    </div>
+                    <div class="col-md-8 col-12 col-sm-4">
+                        <div class="card-body">
+                            <h3 class="card-title text-center">{{contact.title}}</h3>
+                            <span class="card-text">
+                                <ul *ngIf="contact.description == null" class="iconList">
+                                    <li *ngFor="let url of contact.urls">
+                                        <a href="{{url.path}}">
+                                            <i class=" fa fa-2x fa-brands fa-{{ url.icon }} "></i>
+                                        </a>
 
-                            </p>
-                        </span>
+                                    </li>
 
+                                </ul>
+                                <p *ngIf="contact.description != null" style="padding: 5px;" class="iconList">
+
+                                    {{ contact.description }}
+
+                                </p>
+                            </span>
+
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
+    </div>
+    <hr>
+    <div class="d-flex justify-content-center mt-5 w-100 flex-wrap">
+
+        <form [formGroup]="form" class="form-group ">
+
+            <div class="row">
+                <div class="col-sm-12 col-12 m-2">
+                    <div class="input-group w-100">
+                        <label for="email">Email address</label>
+                        <input type="email" formControlName="email" class="form-control w-100" id="email"
+                            aria-describedby="emailHelp" placeholder="your-email@email.com">
+                    </div>
+
+                </div>
+                <div class="col-sm-12 col-12 m-2">
+                    <div class="input-group w-100">
+                        <label for="message">Message</label>
+                        <textarea id="message" formControlName="message"
+                            placeholder="type here a message if you would like contact me ..."
+                            class="form-control w-100"></textarea>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 m-2">
+                    <div class="input-group pt-4 d-flex justify-content-end">
+                        <button (click)="handlerEmail()" class="btn btn-send w-100">
+                            send
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
 
     </div>
-</div>
-<hr>
-<div class="d-flex justify-content-center mt-5 w-100 flex-wrap">
-
-    <form [formGroup]="form" class="form-group ">
-
-        <div class="row">
-            <div class="col-sm-12 col-12 m-2">
-                <div class="input-group w-100">
-                    <label for="email">Email address</label>
-                    <input type="email" formControlName="email" class="form-control w-100" id="email"
-                        aria-describedby="emailHelp" placeholder="youremail@anything.com">
-                </div>
-
-            </div>
-            <div class="col-sm-12 col-12 m-2">
-                <div class="input-group w-100">
-                    <label for="message">Message</label>
-                    <textarea id="message" formControlName="message"
-                        placeholder="type here a message if you would like contact me ..."
-                        class="form-control w-100"></textarea>
-                </div>
-            </div>
-
-            <div class="col-sm-12 m-2">
-                <div class="input-group pt-4 d-flex justify-content-end">
-                    <button (click)="handlerEmail()" class="btn btn-primary w-100">
-                        send
-                    </button>
-                </div>
-            </div>
-
-        </div>
-
-    </form>
-
 </div>
