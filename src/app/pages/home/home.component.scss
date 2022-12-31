@@ -1,0 +1,17 @@
+#home {
+  // border: 1px solid red;
+  height: 85vh;
+  display: flex;
+  align-items: center; //centraliza horizontalmente
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+h6,
+h2,
+h1,
+span {
+  text-align: center;
+  color: #e8f1f2;
+}
+
