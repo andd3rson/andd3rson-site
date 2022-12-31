@@ -13,7 +13,7 @@ export class ProjectsComponent implements OnInit {
   constructor(private proj: ProjectsService) {
     proj.getGitHubRepository().subscribe((res: Project[]) => {
       this.gitProject = res;
-      console.log(this.gitProject[1].name);
+      
     });
   }
 

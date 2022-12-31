@@ -1,8 +1,15 @@
 <p>projects works!</p>
 
 <ul *ngFor="let item of gitProject">
-    <li [id]="item.id">
-        {{ item.name }} --
-        {{item.html_url}}
-    </li>
+    <div *ngIf="item.language == 'C#'">
+        <li [id]="item.id">
+            {{ item.name }} --
+            {{item.html_url}}
+            
+        </li>
+
+        <li> 
+            {{item.language}}
+        </li>
+    </div>
 </ul>

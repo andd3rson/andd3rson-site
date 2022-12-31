@@ -1,75 +1,78 @@
-<!--A picture -->
-<section class="picture">
-    <div class="text-center">
-        <img src="../../../assets/pic1.jpeg" style="height: 70vh;" class="img-fluid rounded" alt="...">
-    </div>
+<div class="about">
+
+    <!--A picture -->
+    <section class="picture">
+        <div class="text-center">
+            <img src="../../../assets/pic1.jpeg" style="height: 70vh;" class="img-fluid rounded" alt="...">
+        </div>
+        <hr>
+    </section>
+
+    <!--Personal Information Section-->
+    <section class="personal-information pt-3">
+        <div class="mb-4">
+
+            <h6>{{introduction[0].title}}</h6>
+            <span>{{ introduction[0].describe }}</span>
+        </div>
+        <ul style="list-style: square;">
+            <li *ngFor="let item of personal">
+                <strong> {{ item.field }}</strong> - <small> {{item.describe}}</small>
+            </li>
+        </ul>
+
+        <div class="mb-4">
+            <span>{{ introduction[1].describe }}</span>
+        </div>
+    </section>
+
     <hr>
-</section>
+    <!-- Skills -->
+    <section>
+        <div class="row">
+            <div class="col-sm-3 col-12">
+                <h6>Backend</h6>
+                <ul>
+                    <li>.NET</li>
+                    <li>Node.Js</li>
+                    <li>T-SQL</li>
+                    <li>Domain Driver Design</li>
+                </ul>
 
-<!--Personal Information Section-->
-<section class="personal-information pt-3">
-    <div class="mb-4">
+            </div>
+            <div class="col-sm-3 col-12">
+                <h6>FrontEnd</h6>
+                <ul>
+                    <li>Html</li>
+                    <li>Css</li>
+                    <li>Bootstrap</li>
+                    <li>Material</li>
+                    <li>JQuery</li>
+                    <li>ReactJS</li>
+                    <li>Angular</li>
+                </ul>
 
-        <h6>{{introduction[0].title}}</h6>
-        <span>{{ introduction[0].describe }}</span>
-    </div>
-    <ul style="list-style: square;">
-        <li *ngFor="let item of personal">
-            <strong> {{ item.field }}</strong> - <small> {{item.describe}}</small>
-        </li>
-    </ul>
+            </div>
+            <div class="col-sm-3 col-12">
+                <h6>Database</h6>
+                <ul>
+                    <li>SQLServer</li>
+                    <li>MySQL</li>
+                    <li>Postgres</li>
+                    <li>MongoDB</li>
+                </ul>
 
-    <div class="mb-4">
-        <span>{{ introduction[1].describe }}</span>
-    </div>
-</section>
+            </div>
+            <div class="col-sm-3 col-12">
+                <h6>Complement</h6>
+                <ul>
+                    <li>Git</li>
+                    <li>Azure Devops</li>
+                    <li>xUnit (to write unit and integrations tests)</li>
+                </ul>
 
-<hr>
-<!-- Skills -->
-<section>
-    <div class="row">
-        <div class="col-sm-3 col-12">
-            <h6>Backend</h6>
-            <ul>
-                <li>.NET</li>
-                <li>Node.Js</li>
-                <li>T-SQL</li>
-                <li>Domain Driver Design</li>
-            </ul>
-
+            </div>
         </div>
-        <div class="col-sm-3 col-12">
-            <h6>FrontEnd</h6>
-            <ul>
-                <li>Html</li>
-                <li>Css</li>
-                <li>Bootstrap</li>
-                <li>Material</li>
-                <li>JQuery</li>
-                <li>ReactJS</li>
-                <li>Angular</li>
-            </ul>
-
-        </div>
-        <div class="col-sm-3 col-12">
-            <h6>Database</h6>
-            <ul>
-                <li>SQLServer</li>
-                <li>MySQL</li>
-                <li>Postgres</li>
-                <li>MongoDB</li>
-            </ul>
-
-        </div>
-        <div class="col-sm-3 col-12">
-            <h6>Complement</h6>
-            <ul>
-                <li>Git</li>
-                <li>Azure Devops</li>
-                <li>xUnit (to write unit and integrations tests)</li>
-            </ul>
-
-        </div>
-    </div>
-</section>
-<hr>
+    </section>
+    <hr>
+</div>
