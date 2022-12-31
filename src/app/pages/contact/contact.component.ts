@@ -57,6 +57,7 @@ export class ContactComponent implements OnInit {
   }
 
   handlerEmail() {
-    console.log(this.form.value);
+    window.alert("It isn't working yet!");
+    // console.log(this.form.value);
   }
 }
